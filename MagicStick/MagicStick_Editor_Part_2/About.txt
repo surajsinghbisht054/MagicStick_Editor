@@ -1,0 +1,3 @@
+# MagicStick Functions Addons
+
+	1. ScrollBar Function

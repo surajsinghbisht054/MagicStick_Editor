@@ -1,0 +1,4 @@
+# MagicStick Functions Addons
+
+	1. ScrollBar Function
+	2. LineNumber Function
