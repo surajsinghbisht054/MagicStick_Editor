@@ -7,3 +7,7 @@
 		Paste
 		Cut
 		select_all
+		undo
+		redo
+	4. PopupMenu
+	5. Find, Findall, replace, replaceall (not operational)

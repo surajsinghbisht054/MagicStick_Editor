@@ -66,6 +66,7 @@ from ConfigSettings import Connect
 class TextPad(Tkinter.Text):
 	def __init__(self, *args, **kwargs):
 		Tkinter.Text.__init__(self, *args, **kwargs)
+		self.storeobj = {}
 		self.Connect_External_Module_Features()
 		self._pack()
 

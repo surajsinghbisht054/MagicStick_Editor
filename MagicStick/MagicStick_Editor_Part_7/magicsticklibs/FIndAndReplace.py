@@ -3,8 +3,8 @@
 ##
 ##    Developed by:   Suraj Singh
 ##                    surajsinghbisht054@gmail.com
-##                    github.com/surajsinghbisht054
-##                    http://bitforestinfo.blogspot.com
+##					  github.com/surajsinghbisht054
+## 					  http://bitforestinfo.blogspot.com
 ##
 ##    Permission is hereby granted, free of charge, to any person obtaining
 ##    a copy of this software and associated documentation files (the
@@ -23,8 +23,8 @@
 ##
 ##    + Neither the names of Suraj Singh
 ##                    surajsinghbisht054@gmail.com
-##                    github.com/surajsinghbisht054
-##                    http://bitforestinfo.blogspot.com nor
+##					  github.com/surajsinghbisht054
+## 					  http://bitforestinfo.blogspot.com nor
 ##      the names of its contributors may be used to endorse or promote
 ##      products derived from this Software without specific prior written
 ##      permission.
@@ -59,60 +59,95 @@ __author__='''
     Note: We Feel Proud To Be Indian
 ######################################################
 '''
+
+
 from Graphics import Tkinter
 
-class StationeryFunctions:
-    def __init__(self, text):
-        self.text = text
-        self.create_binding_keys()
-        self.binding_functions_config()
-        self.join_function_with_main_stream()
+def FindAsk(parent,*args):
+	root = Tkinter.Toplevel(parent)
+	root.title("Find And Replace")
+	root.transient(parent)
+	root.focus_force()
+	root.resizable(width=0, height=0)
+	root['padx']=20
+	fields = {}
+	field={}
+	for r, label in enumerate(args):
+		store_label = Tkinter.Label(root, text=label)
+		store_label.grid(row=r, column = 0, ipady=5, ipadx=20)
+		store_entry = Tkinter.Entry(root)
+		store_entry.grid(row=r, column=1)
+		field[label]=store_entry
+	fields['submit']=False
+	def sub():
+		for l,t in field.iteritems():
+			fields[l]=t.get()
+		fields['submit']=True
+		root.destroy()
+		return
+	submit=Tkinter.Button(root,text="Ok", command=sub)
+	submit.grid(row=r+1, column=2)
+	root.wait_window()
+	return fields
 
 
-    def join_function_with_main_stream(self):
-        self.text.storeobj['Copy']   =  self.copy
-        self.text.storeobj['Cut']    =  self.cut
-        self.text.storeobj['Paste']  =  self.paste
-        self.text.storeobj['SelectAll']=self.select_all
-        self.text.storeobj['DeselectAll']=self.deselect_all
-        return
+class FindReplaceFunctions:
+	def __init__(self,text):
+		self.text = text
+		self.key_binding_functions()
+		self.binding_functions_configuration()
 
-    def binding_functions_config(self):
-        self.text.tag_configure("sel", background="skyblue")
-        return
+	def binding_functions_configuration(self):
+		self.text.storeobj['Find'] = self.find_
+		self.text.storeobj['FindAll'] = self.find_all
+		self.text.storeobj['Replace'] = self.replace
+		self.text.storeobj['ReplaceAll'] = self.replace_all
+		return
 
-    def copy(self, event):
-        self.text.event_generate("<<Copy>>")
-        return
-
-    def paste(self, event):
-        self.text.event_generate("<<Paste>>")
-        return
-
-    def cut(self, event):
-        self.text.event_generate("<<Cut>>")
-        return
-
-    def create_binding_keys(self):
-        for key in ["<Control-a>","<Control-A>"]:
-            self.text.master.bind(key, self.select_all)
-        for key in ["<Button-1>","<Return>"]:
-            self.text.master.bind(key, self.deselect_all)
-        return
-
-    def select_all(self, event):
-        self.text.tag_add("sel",'1.0','end')
-        return
+	def key_binding_functions(self):
+		for key in ['<Control-F>',"<Control-f>"]:
+			self.text.bind(key, self.find_)
+		for key in ['<Control-Shift-F>',"<Control-Shift-f>"]:
+			self.text.bind(key, self.find_all)
+		for key in ['<Control-Shift-H>',"<Control-Shift-h>"]:
+			self.text.bind(key, self.replace_all)
+		for key in ['<Control-H>',"<Control-h>"]:
+			self.text.bind(key, self.replace)
+		return
 
 
-    def deselect_all(self, event):
-        self.text.tag_remove("sel",'1.0','end')
-        return
+	def find_(self, event=None):
+		t = FindAsk(self.text.master, "Find")
+		if t['submit']:
+			print t['Find']
+		return
+
+	def find_all(self, event=None):
+		t = FindAsk(self.text.master, "FindAll")
+		if t['submit']:
+			print t['FindAll']
+		return
+
+	def replace(self, event=None):
+		t = FindAsk(self.text.master, "Find", "Replace")
+		if t['submit']:
+			print t['Find']
+			print t['Replace']
+		return
+
+	def replace_all(self, event=None):
+		t = FindAsk(self.text.master, "FindAll", "ReplaceAll")
+		if t['submit']:
+			print t['FindAll']
+			print t['ReplaceAll']
+		return
+
 
 if __name__ == '__main__':
-    root = Tkinter.Tk()
-    pad = Tkinter.Text(root,wrap='none')
-    pad.storeobj = {}
-    StationeryFunctions(pad)
-    pad.pack()
-    root.mainloop()
+	root = Tkinter.Tk()
+	pad = Tkinter.Text(root)
+	pad.pack()
+	pad.storeobj={}
+	FindReplaceFunctions(pad)
+	#print FindAsk(root,"a","b",1)
+	root.mainloop()

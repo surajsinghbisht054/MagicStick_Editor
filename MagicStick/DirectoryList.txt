@@ -1,0 +1,109 @@
+
+# My Curent Directory files and folders
+
+
+MagicStick_Editor_Part_0
+	|
+	|---> About.txt  
+	|
+	|---> magicsticklibs
+	|		|
+	|		|---> __init__.py
+	|		|     
+	|		|---> Main.py
+	|		|            
+	|		|---> TextPad.py
+	|		|
+	|		|---> Graphics.py         
+	|
+	|
+	|---> main.py
+
+
+MagicStick_Editor_Part_1
+	|
+	|---> About.txt  
+	|
+	|---> magicsticklibs
+	|		|
+	|		|---> __init__.py
+	|		|     
+	|		|---> Main.py
+	|		|            
+	|		|---> TextPad.py
+	|		|
+	|		|---> Graphics.py
+	|		|
+	|       |---> ConfigSettings.py 
+	|
+	|
+	|---> main.py
+
+MagicStick_Editor_Part_2
+	|
+	|---> About.txt  
+	|
+	|---> magicsticklibs
+	|		|
+	|		|---> __init__.py
+	|		|     
+	|		|---> Main.py
+	|		|            
+	|		|---> TextPad.py
+	|		|
+	|		|---> Graphics.py
+	|		|
+	|       |---> ConfigSettings.py 
+	|		|
+	|		|---> ScrollBar.py
+	|
+	|
+	|---> main.py
+
+MagicStick_Editor_Part_3
+	|
+	|---> About.txt  
+	|
+	|---> magicsticklibs
+	|		|
+	|		|---> __init__.py
+	|		|     
+	|		|---> Main.py
+	|		|            
+	|		|---> TextPad.py
+	|		|
+	|		|---> Graphics.py
+	|		|
+	|       |---> ConfigSettings.py 
+	|		|
+	|		|---> ScrollBar.py
+	|		|
+	|		|---> LineNumber.py
+	|
+	|
+	|---> main.py
+
+MagicStick_Editor_Part_4
+	|
+	|---> About.txt  
+	|
+	|---> magicsticklibs
+	|		|
+	|		|---> __init__.py
+	|		|     
+	|		|---> Main.py
+	|		|            
+	|		|---> TextPad.py
+	|		|
+	|		|---> Graphics.py
+	|		|
+	|       |---> ConfigSettings.py 
+	|		|
+	|		|---> ScrollBar.py
+	|		|
+	|		|---> LineNumber.py
+	|		|
+	|		|---> StationeryFunctions.py
+	|
+	|
+	|---> main.py

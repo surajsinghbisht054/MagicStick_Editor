@@ -7,3 +7,5 @@
 		Paste
 		Cut
 		select_all
+		undo
+		redo

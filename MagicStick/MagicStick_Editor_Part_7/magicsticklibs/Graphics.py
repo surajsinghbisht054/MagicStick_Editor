@@ -3,8 +3,8 @@
 ##
 ##    Developed by:   Suraj Singh
 ##                    surajsinghbisht054@gmail.com
-##                    github.com/surajsinghbisht054
-##                    http://bitforestinfo.blogspot.com
+##					  github.com/surajsinghbisht054
+## 					  http://bitforestinfo.blogspot.com
 ##
 ##    Permission is hereby granted, free of charge, to any person obtaining
 ##    a copy of this software and associated documentation files (the
@@ -23,8 +23,8 @@
 ##
 ##    + Neither the names of Suraj Singh
 ##                    surajsinghbisht054@gmail.com
-##                    github.com/surajsinghbisht054
-##                    http://bitforestinfo.blogspot.com nor
+##					  github.com/surajsinghbisht054
+## 					  http://bitforestinfo.blogspot.com nor
 ##      the names of its contributors may be used to endorse or promote
 ##      products derived from this Software without specific prior written
 ##      permission.
@@ -59,60 +59,10 @@ __author__='''
     Note: We Feel Proud To Be Indian
 ######################################################
 '''
-from Graphics import Tkinter
 
-class StationeryFunctions:
-    def __init__(self, text):
-        self.text = text
-        self.create_binding_keys()
-        self.binding_functions_config()
-        self.join_function_with_main_stream()
+try:
+	import Tkinter as Tkinter
 
+except:
+	import tkinter as Tkinter
 
-    def join_function_with_main_stream(self):
-        self.text.storeobj['Copy']   =  self.copy
-        self.text.storeobj['Cut']    =  self.cut
-        self.text.storeobj['Paste']  =  self.paste
-        self.text.storeobj['SelectAll']=self.select_all
-        self.text.storeobj['DeselectAll']=self.deselect_all
-        return
-
-    def binding_functions_config(self):
-        self.text.tag_configure("sel", background="skyblue")
-        return
-
-    def copy(self, event):
-        self.text.event_generate("<<Copy>>")
-        return
-
-    def paste(self, event):
-        self.text.event_generate("<<Paste>>")
-        return
-
-    def cut(self, event):
-        self.text.event_generate("<<Cut>>")
-        return
-
-    def create_binding_keys(self):
-        for key in ["<Control-a>","<Control-A>"]:
-            self.text.master.bind(key, self.select_all)
-        for key in ["<Button-1>","<Return>"]:
-            self.text.master.bind(key, self.deselect_all)
-        return
-
-    def select_all(self, event):
-        self.text.tag_add("sel",'1.0','end')
-        return
-
-
-    def deselect_all(self, event):
-        self.text.tag_remove("sel",'1.0','end')
-        return
-
-if __name__ == '__main__':
-    root = Tkinter.Tk()
-    pad = Tkinter.Text(root,wrap='none')
-    pad.storeobj = {}
-    StationeryFunctions(pad)
-    pad.pack()
-    root.mainloop()
