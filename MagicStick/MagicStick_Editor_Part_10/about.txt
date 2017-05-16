@@ -1,0 +1,15 @@
+# MagicStick Functions Addons
+
+	1. ScrollBar Function
+	2. LineNumber Function
+	3. Stationery Functions.
+		Copy
+		Paste
+		Cut
+		select_all
+		undo
+		redo
+	4. PopupMenu
+	5. Find, Findall replace, replaceall (operational)
+	6. File Handler
+

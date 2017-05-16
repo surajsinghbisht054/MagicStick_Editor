@@ -107,3 +107,127 @@ MagicStick_Editor_Part_4
 	|
 	|
 	|---> main.py
+
+MagicStick_Editor_Part_5
+	|
+	|---> About.txt  
+	|
+	|---> magicsticklibs
+	|		|
+	|		|---> __init__.py
+	|		|     
+	|		|---> Main.py
+	|		|            
+	|		|---> TextPad.py
+	|		|
+	|		|---> Graphics.py
+	|		|
+	|		|---> ConfigSettings.py 
+	|		|
+	|		|---> ScrollBar.py
+	|		|
+	|		|---> LineNumber.py
+	|		|
+	|		|---> StationeryFunctions.py
+	|		|
+	|		|---> PopupMenu.py
+	|
+	|
+	|---> main.py
+
+
+
+MagicStick_Editor_Part_7
+	|
+	|---> About.txt  
+	|
+	|---> magicsticklibs
+	|		|
+	|		|---> __init__.py
+	|		|     
+	|		|---> Main.py
+	|		|            
+	|		|---> TextPad.py
+	|		|
+	|		|---> Graphics.py
+	|		|
+	|		|---> ConfigSettings.py 
+	|		|
+	|		|---> ScrollBar.py
+	|		|
+	|		|---> LineNumber.py
+	|		|
+	|		|---> StationeryFunctions.py
+	|		|
+	|		|---> PopupMenu.py
+	|		|
+	|		|---> FindAndReplace.py
+	|
+	|---> main.py
+
+MagicStick_Editor_Part_10
+	|
+	|---> About.txt  
+	|
+	|---> magicsticklibs
+	|		|
+	|		|---> __init__.py
+	|		|     
+	|		|---> Main.py
+	|		|            
+	|		|---> TextPad.py
+	|		|
+	|		|---> Graphics.py
+	|		|
+	|		|---> ConfigSettings.py 
+	|		|
+	|		|---> ScrollBar.py
+	|		|
+	|		|---> LineNumber.py
+	|		|
+	|		|---> StationeryFunctions.py
+	|		|
+	|		|---> PopupMenu.py
+	|		|
+	|		|---> FindAndReplace.py
+	|		|
+	|		|---> FileHandler.py
+	|
+	|---> main.py
+
+
+MagicStick_Editor_Part_11
+	|
+	|---> About.txt  
+	|
+	|---> magicsticklibs
+	|		|
+	|		|---> __init__.py
+	|		|     
+	|		|---> Main.py
+	|		|            
+	|		|---> TextPad.py
+	|		|
+	|		|---> Graphics.py
+	|		|
+	|		|---> ConfigSettings.py 
+	|		|
+	|		|---> ScrollBar.py
+	|		|
+	|		|---> LineNumber.py
+	|		|
+	|		|---> StationeryFunctions.py
+	|		|
+	|		|---> PopupMenu.py
+	|		|
+	|		|---> FindAndReplace.py
+	|		|
+	|		|---> FileHandler.py
+	|		|
+	|		|---> FontChooser.py
+	|		|
+	|		|---> ColorLight.py
+	|		
+	|		
+	|
+	|---> main.py
