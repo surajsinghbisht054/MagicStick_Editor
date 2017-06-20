@@ -67,6 +67,23 @@ class FileHandler:
 		self.text.storeobj['OpenFile']=None
 		self.functions_key_bindings()
 		self.binding_key_configuration()
+		self.already_open_file()
+
+	def already_open_file(self):
+		try:
+			f=open("cachememory", 'r')
+			path=f.read()
+			f.close()
+
+		except:
+			path=None
+
+		if path:
+			data=open(path,"rb").read()
+			self.text.delete('1.0','end')
+			self.text.insert("1.0", data)
+			self.text.storeobj['OpenFile']=path
+		return
 
 	def binding_key_configuration(self):
 		for key in ['<Control-N>',"<Control-n>"]:
@@ -109,6 +126,7 @@ class FileHandler:
 			f_.write(data)
 			f_.close()
 			self.text.storeobj['OpenFile']=path
+
 		return
 
 	def save_as(self, event=None):
@@ -121,7 +139,8 @@ class FileHandler:
 		return
 
 	def new_file(self, event=None):
-		print "New"
+		import os
+		os.system("python main.py")
 		return
 
 	def quit(self, event=None):
@@ -132,6 +151,11 @@ class FileHandler:
 			pass
 		else:
 			self.save_file()
+		if self.text.storeobj['OpenFile']:
+			
+			f=open("cachememory", 'w')
+			f.write(self.text.storeobj['OpenFile'])
+			f.close()
 		import sys
 		sys.exit(0)
 		return
