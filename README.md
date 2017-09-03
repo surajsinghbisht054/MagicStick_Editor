@@ -1,5 +1,7 @@
 # MagicStick_Editor
-MagicStick Editor Written In Python and Tkinter GUI library
+
+MagicStick Editor Written In Python 2.x and Tkinter GUI library
+
 
 __author__='''
 
