@@ -70,6 +70,7 @@ if __name__=='__main__':
 	from Settings import Configuration
 	from ColorLight import ColorLight
 	from MenuBarHandler import MenuBar
+	from autotyping import AutoWrite
 else:
 	from .LineNumber import LineMain
 	from .ScrollBar import Scrollbar
@@ -81,6 +82,7 @@ else:
 	from .Settings import Configuration
 	from .ColorLight import ColorLight
 	from .MenuBarHandler import MenuBar
+	from .autotyping import AutoWrite
 
 class Connect:
 	def __init__(self, pad):
@@ -99,4 +101,5 @@ class Connect:
 		Configuration(self.pad)
 		ColorLight(self.pad)
 		MenuBar(self.pad)
+		AutoWrite(self.pad)
 		return
